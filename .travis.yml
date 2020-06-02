@@ -1,4 +1,4 @@
-sudo: required
+Zsudo: required
 language: generic
 
 services:
@@ -17,7 +17,7 @@ after_success:
   - docker build -t yazovaliyski/nginx ./nginx
   # Docker login
 
-  -echo "$docker_password" | docker login -u "$docker_id" --pasword-stdin
+  -echo "$docker_password" | docker login -u "$docker_id" --password-stdin
   # Take those images and push to Docker HUB
   - docker push yazovaliyski/multi-client
   - docker push yazovaliyski/multi-server
